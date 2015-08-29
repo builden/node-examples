@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>xhr test</title>
+</head>
+
+<body>
+  <script>
+    var Ltc = {};
+  </script>
+  <script src="querystring.min.js"></script>
+  <script src="http-req.js"></script>
+  <script>
+    var testUrl = 'http://localhost:3000';
+    var apiUrl = testUrl + '/api';
+
+    var sendObj = {
+      "get": '中文\" \\ /* ad-_.!~*\'()',
+      "arr": [1, 2, '中文\" \\ * ad'],
+      "adress": "中文",
+      http: "http://www.qq.com/?dadf=123&ad=22#23345",
+      inObj: JSON.stringify({
+        "a": '中文\" \\ /* ad-_.!~*\'()',
+        "b": "http://www.qq.com/?dadf=123&ad=22#23345"
+      })
+    };
+    var getUrl = apiUrl + '?' + querystring.stringify(sendObj);
+    http.get(getUrl, function(err, body) {
+      console.log('get result');
+      console.log(body);
+      console.log(JSON.parse(body));
+    });
+
+    var formObj = {
+      "post": '中文\" \\ * ad-_.!~*\'()',
+      "arr": [1, 2, '中文\" \\ * ad-_.!~*\'()'],
+      "adress": "中文",
+      inObj: JSON.string({
+        a: 'b'
+      })
+    };
+
+    http.post(apiUrl, querystring.stringify(formObj), function(err, body) {
+      console.log('post result');
+      console.log(body);
+      console.log(JSON.parse(body));
+    });
+  </script>
+</body>
+
+</html>
