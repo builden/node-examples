@@ -19,10 +19,13 @@
   "dependencies": {
     "archiver": "^0.15.0",
     "better-console": "^0.2.4",
+    "commander": "^2.8.1",
     "express": "^4.13.3",
+    "fs-extra": "^0.24.0",
     "moment": "^2.10.6",
     "qs": "^5.0.0",
     "qs-lite": "0.0.1",
-    "request": "^2.61.0"
+    "request": "^2.61.0",
+    "toxy": "^0.2.2"
   }
 }
