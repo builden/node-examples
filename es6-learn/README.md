@@ -1,7 +1,7 @@
 # es6 node
 
 ## install
-```js
+```bash
 npm i -g babel
 ```
 
