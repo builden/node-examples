@@ -26,6 +26,8 @@ class Point {
   static staticFunc() {
     console.log('call static Func');
   }
+
+  tmpProp = 1;
 }
 
 var p = new Point(3);
