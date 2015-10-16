@@ -72,7 +72,7 @@ console.log(cp.add);
 // cp.staticFunc(); // TypeError: undefined is not a function
 ColorPoint.staticFunc();
 
-/* es7属性 babel --optional es7.classProperties class.js
+// es7属性 babel --optional es7.classProperties class.js
 class Person {
   firstName = "Sebastian";
   static lastName = "McKenzie";
@@ -80,4 +80,3 @@ class Person {
 
 assert(new Person().firstName, "Sebastian");
 assert(Person.lastName, "McKenzie");
-*/
