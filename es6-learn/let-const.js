@@ -39,3 +39,10 @@ assert.equal(a[6](), 6); // 6
 const PI = 3.1415;
 // PI = 3; // TypeError: Assignment to constant variable.
 assert.equal(PI, 3.1415); // 3.1415
+
+const arr = [
+  1,
+  2,
+  3,
+];
+assert.equal(arr.length, 3);
