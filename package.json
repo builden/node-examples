@@ -30,5 +30,8 @@
     "request": "^2.61.0",
     "superagent": "^1.4.0",
     "toxy": "^0.2.2"
+  },
+  "babel": {
+    "stage": 0
   }
 }
