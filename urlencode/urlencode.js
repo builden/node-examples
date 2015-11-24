@@ -102,3 +102,28 @@ function x5Quote(uri) {
   console.log(querysting.stringify(obj));
   console.log(qs.stringify(obj));
 })();
+
+
+var htmlCode = '{"\u4e0a\u6c99\u4e2d\u5b66":["\u91d1\u5730\u6d77\u666f\u82b1\u56ed","\u91d1\u5730\u6d77\u666f\u7fe0\u5824\u6e7e","\u5168\u6d77\u82b1\u56ed","\u7eff\u666f\u84dd\u6e7e\u534a\u5c9b","\u91d1\u6d77\u4e3d\u540d\u5c45","\u661f\u6cb3\u9526\u5c45","\u597d\u666f\u8c6a\u56ed","\u91d1\u5730\u540d\u8f69","\u6c99\u5634\u4e1c\u6751","\u6c99\u5634\u897f\u6751","\u91d1\u5730\u82b1\u56ed","\u91d1\u6d77\u6e7e\u82b1\u56ed","\u798f\u6c11\u65b0\u82d1","\u4e0a\u6c99\u4e1c\u6751","\u4e0a\u6c99\u5858\u664f\u6751","\u4e0a\u6c99\u9f99\u79cb\u6751","\u4e0a\u6c99\u82b1\u56ed","\u4e0a\u6c99\u6930\u6811\u6751","\u798f\u8363\u697c","\u60e0\u53d1\u82b1\u56ed","\u4e0b\u6c99\u6751","\u91d1\u57df\u84dd\u6e7e","\u9e3f\u666f\u6e7e\u540d\u82d1","\u6cf0\u7136\u5e7f\u573a","\u82b1\u597d\u56ed","\u78a7\u6d77\u7ea2\u6811\u56ed"]}';
+console.log(JSON.parse(htmlCode));  // 自动转成了中文
+
+console.log(_.unescape('&amp;, &lt;, &gt;, &quot;, &#39;, &#8482;, &#23398;'));
+// => &, <, >, ", ', &#8482;, &#23398;
+
+console.log(_.escape('&, <, >, \", \', ™, 深'));
+// => &amp;, &lt;, &gt;, &quot;, &#39;, 深
+
+console.log(s.unescapeHTML('&amp;, &lt;, &gt;, &quot;, &#39;, &#8482;, &#23398;'));
+// => &, <, >, ", &#39;, &#8482;, &#23398;
+
+console.log(s.escapeHTML('&, <, >, \", \', ™, 深'));
+// => &amp;, &lt;, &gt;, &quot;, &apos;, ™, 深
+
+console.log(unescape('&amp;, &lt;, &gt;, &quot;, &#39;, &#8482;, &#23398;'));
+// => &amp;, &lt;, &gt;, &quot;, &#39;, &#8482;, &#23398;
+
+console.log(escape('&, <, >, \", \', 深'));
+// => %26%2C%20%3C%2C%20%3E%2C%20%22%2C%20%27%2C%20%u6DF1
+
+// 无需转码，js原生支持这种编码方式
+console.log('\u4e0a\u6c99\u4e2d\u5b66'); // => 上沙中学
