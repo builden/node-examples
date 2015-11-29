@@ -22,6 +22,7 @@
     "commander": "^2.8.1",
     "express": "^4.13.3",
     "fs-extra": "^0.24.0",
+    "immutable": "^3.7.5",
     "jimp": "^0.2.7",
     "moment": "^2.10.6",
     "node-promise-es6": "^0.2.3",
@@ -33,5 +34,8 @@
   },
   "babel": {
     "stage": 0
+  },
+  "devDependencies": {
+    "babel": "^5.8.34"
   }
 }
