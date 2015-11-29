@@ -30,6 +30,7 @@
     "qs-lite": "0.0.1",
     "request": "^2.61.0",
     "superagent": "^1.4.0",
+<<<<<<< HEAD
     "toxy": "^0.2.2"
   },
   "babel": {
@@ -37,5 +38,9 @@
   },
   "devDependencies": {
     "babel": "^5.8.34"
+=======
+    "toxy": "^0.2.2",
+    "underscore.string": "^3.2.2"
+>>>>>>> origin/master
   }
 }

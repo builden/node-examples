@@ -80,30 +80,3 @@ class Person {
 
 assert(new Person().firstName, "Sebastian");
 assert(Person.lastName, "McKenzie");
-
-function timeout(ms) {
-  return new Promise((resolve, reject) => {
-    setTimeout(resolve, ms);
-  });
-}
-
-class GenClass {
-  async gen() {
-    console.log('genClass gen beg');
-    await timeout(1000);
-    console.log('genClass gen end');
-  }
-}
-
-const genClass = new GenClass();
-genClass.gen();
-
-const obj = {
-  async gen() {
-    console.log('obj gen beg');
-    await timeout(1000);
-    console.log('obj gen end');
-  },
-};
-
-obj.gen();
