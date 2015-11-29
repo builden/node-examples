@@ -1,3 +1,16 @@
+/**
+ * 支持的数据类型
+ *   List - much like a Javascript Array
+ *     set - v.set(-1, 'value') set the last item in the list
+ *   Stack - 堆栈
+ *   Seq
+ *   Map
+ *   OrderedMap
+ *   Set
+ *   OrderedSet
+ *   Record
+ *
+ */
 import Immutable from 'immutable';
 import assert from 'assert';
 
